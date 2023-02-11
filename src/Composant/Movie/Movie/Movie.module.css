@@ -1,0 +1,181 @@
+.card {
+  float: left;
+  padding: 1.7rem;
+  width: 50%;
+}
+
+.card .menuContent {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card .menuContent::before,
+.card .menuContent::after {
+  content: "";
+  display: table;
+}
+
+.card .menuContent::after {
+  clear: both;
+}
+
+.card .menuContent li {
+  display: inline-block;
+}
+
+.card .menu-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card .menuContent span {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: "Open Sans";
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+}
+
+.card .wrapper {
+  background-color: #fff;
+  min-height: 540px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card .wrapper:hover .data {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.card .data {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  -webkit-transform: translateY(calc(70px + 1em));
+  transform: translateY(calc(70px + 1em));
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.card .data .content {
+  padding: 1em;
+  position: relative;
+  z-index: 1;
+}
+
+.card .author {
+  font-size: 12px;
+}
+
+.card .title {
+  margin-top: 10px;
+}
+
+.card .text {
+  height: 70px;
+  margin: 0;
+}
+
+.card input[type="checkbox"] {
+  display: none;
+}
+
+.card input[type="checkbox"]:checked+.menuContent {
+  -webkit-transform: translateY(-60px);
+  transform: translateY(-60px);
+}
+
+.fullImage .wrapper {
+  background-size: cover;
+}
+
+.fullImage .wrapper:hover .menuContent span {
+  -webkit-transform: translate(-50%, -10px);
+  transform: translate(-50%, -10px);
+  opacity: 1;
+}
+
+.fullImage .header {
+  color: #fff;
+  padding: 1em;
+}
+
+.fullImage .header::before,
+.fullImage .header::after {
+  content: "";
+  display: table;
+}
+
+.fullImage .header::after {
+  clear: both;
+}
+
+.fullImage .header .date {
+  float: left;
+  font-size: 12px;
+}
+
+.fullImage .menuContent {
+  float: right;
+}
+
+.fullImage .menuContent li {
+  margin: 0 5px;
+  position: relative;
+}
+
+.fullImage .menuContent span {
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.fullImage .data {
+  color: #fff;
+  -webkit-transform: translateY(calc(70px + 4em));
+  transform: translateY(calc(70px + 4em));
+}
+
+.fullImage .title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.fullImage .date span {
+  margin-right: 5px;
+}
+
+.fullImage .button {
+  display: block;
+  width: 100px;
+  margin: 2em auto 1em;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1;
+  position: relative;
+  font-weight: 700;
+}
+
+.fullImage .button::after {
+  content: "\2192";
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  transition: all 0.3s;
+}
+
+.fullImage .button:hover::after {
+  -webkit-transform: translate(5px, -50%);
+  transform: translate(5px, -50%);
+  opacity: 1;
+}
