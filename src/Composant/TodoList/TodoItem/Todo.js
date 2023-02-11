@@ -1,13 +1,13 @@
 import { checkPropTypes } from "prop-types";
-const Todo = () => {
+const Todo = (id, title) => {
 
   return ( 
-    <div>
+    <section className="main">
         <input id="toggle-all" className="toggle-all" type="checkbox" />
-        <label for="toggle-all">Mark all as complete</label>
+        <label htmlFor="toggle-all">Mark all as complete</label>
         <ul className="todo-list">
-        {/<!-- These are here just to show the structure of the list items -->/}
-					{/<!-- List items should get the class `editing` when editing and `completed` when marked as completed -->/}
+            {/*<!-- These are here just to show the structure of the list items -->*/}
+            {/*<!-- List items should get the className `editing` when editing and `completed` when marked as completed -->*/}
             <li className="completed">
                 <div className="view">
                     <input className="toggle" type="checkbox" checked />
@@ -25,7 +25,7 @@ const Todo = () => {
                 <input className="edit" value="Rule the web" />
             </li>
         </ul>
-	</div>
+    </section>
    );
 }
 
